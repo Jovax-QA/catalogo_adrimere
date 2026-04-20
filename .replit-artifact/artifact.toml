@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Catálogo de Beleza"
+version = "1.0.0"
+id = "artifacts/catalogo-beleza"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 24700
+
+[services.development]
+run = "pnpm --filter @workspace/catalogo-beleza run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/catalogo-beleza", "run", "build" ]
+publicDir = "artifacts/catalogo-beleza/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "24700"
+BASE_PATH = "/"
