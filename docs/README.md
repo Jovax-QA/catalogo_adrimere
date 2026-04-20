@@ -115,7 +115,62 @@ Problema Identificado
 
 ---
 
-## 🎓 Recursos do Agente
+## � Git Workflow
+
+### Branch Naming
+
+Use prefixos na **branch** para indicar o tipo de trabalho:
+
+| Prefixo | Quando usar | Exemplo |
+|---------|-------------|---------|
+| `feature/` | Nova funcionalidade | `feature/add-cart` |
+| `bugfix/` | Correção de bug | `bugfix/login-error` |
+| `hotfix/` | Correção urgente em produção | `hotfix/payment-crash` |
+| `refactor/` | Refatoração de código | `refactor/cleanup-hooks` |
+| `test/` | Testes automatizados | `test/playwright-e2e` |
+| `docs/` | Documentação | `docs/update-readme` |
+
+### Commit Message (Conventional Commits)
+
+Use prefixos no **commit** para descrever o que aquele commit específico faz:
+
+| Tipo | Quando usar | Exemplo |
+|------|-------------|---------|
+| `feat:` | Novo recurso | `feat: add shopping cart component` |
+| `fix:` | Correção de bug | `fix: resolve login redirect issue` |
+| `refactor:` | Refatoração | `refactor: simplify product filter logic` |
+| `docs:` | Documentação | `docs: update README with setup steps` |
+| `test:` | Testes | `test: add unit tests for cart` |
+| `chore:` | Tarefas de manutenção | `chore: update dependencies` |
+| `style:` | Formatação/estilo (sem mudança de código) | `style: fix indentation` |
+| `perf:` | Melhoria de performance | `perf: optimize image loading` |
+
+### Exemplo Prático
+
+```bash
+# Criar branch para nova funcionalidade
+git checkout -b feature/playwright-tests
+
+# Fazer commits durante o desenvolvimento
+git commit -m "feat: install playwright and configure base setup"
+git commit -m "test: add e2e test for product catalog"
+git commit -m "docs: add testing guide to README"
+
+# Mergear quando pronto
+git checkout main
+git merge feature/playwright-tests
+```
+
+### Resumo
+
+- **`feature/`** → nome da **branch** (contexto do trabalho)
+- **`feat:`** → tipo do **commit** (o que aquele commit faz)
+
+> 💡 **Dica**: Uma branch `feature/` pode conter múltiplos commits de tipos diferentes (`feat:`, `fix:`, `test:`, `docs:`).
+
+---
+
+## �🎓 Recursos do Agente
 
 O projeto inclui um agente especializado para desenvolvimento frontend:
 
