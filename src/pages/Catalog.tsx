@@ -37,7 +37,7 @@ export function Catalog() {
         {/* Perfil AdriMere */}
         <div className="text-center mb-10">
           <img
-            src="/logo.jpeg"
+            src="./logo.jpeg"
             alt="AdriMere"
             className="w-full h-auto max-h-64 object-contain rounded-3xl shadow-lg mx-auto"
             style={{ imageRendering: 'auto', WebkitBackfaceVisibility: 'hidden' }}
@@ -167,7 +167,7 @@ export function Catalog() {
       <main className="lg:ml-72 min-h-screen relative">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-fixed bg-no-repeat"
-          style={{ backgroundImage: "url('/ChatGPT Image 19 de abr. de 2026, 02_13_14.png')" }}
+          style={{ backgroundImage: "url('./ChatGPT Image 19 de abr. de 2026, 02_13_14.png')" }}
         />
         {/* Overlay branco semi-transparente */}
         <div className="absolute inset-0 bg-white/80" />
@@ -177,7 +177,7 @@ export function Catalog() {
         {/* Perfil Mobile */}
         <div className="lg:hidden flex items-center gap-4 mb-6">
           <img
-            src="/logo.jpeg"
+            src="./logo.jpeg"
             alt="AdriMere"
             className="w-16 h-16 rounded-full object-cover ring-2 ring-rose-100"
           />
