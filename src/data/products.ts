@@ -13,7 +13,7 @@ export interface Category {
   icon: string;
 }
 
-export const WHATSAPP_NUMBER = "5511999999999";
+export const WHATSAPP_NUMBER = "554888808464";
 
 // Ícones Lucide modernos e realistas
 export const categories: Category[] = [
