@@ -39,6 +39,20 @@ jobs:
       - name: Build
         run: npx vite build --config vite.github.config.ts
 
+      - name: Debug - List dist contents
+        run: |
+          echo "=== DIST FOLDER CONTENTS ==="
+          ls -la dist/
+          echo ""
+          echo "=== DIST FOLDER STRUCTURE ==="
+          find dist -type f
+          echo ""
+          echo "=== INDEX.HTML CONTENT ==="
+          cat dist/index.html
+          echo ""
+          echo "=== ASSETS FOLDER ==="
+          ls -la dist/assets/ || echo "No assets folder"
+
       - name: Install Playwright
         run: npx playwright install --with-deps chromium
 
