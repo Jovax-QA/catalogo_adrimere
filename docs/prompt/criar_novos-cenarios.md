@@ -1,7 +1,7 @@
-Preciso que você crie os testes Playwright E2E para a página http://192.168.101.28:5173/
+Preciso que você crie os testes Playwright E2E para a página http://192.168.101.28:5174/
 ETAPA 1 — MAPEAMENTO via Playwright MCP (NÃO altere nenhum dado):
 
-Acesse: http://192.168.101.28:5173/
+Acesse: http://192.168.101.28:5174/
 Tire screenshot + snapshot (verbose) da tela principal
 Interaja com cada dropdown/filtro e capture as opções disponíveis
 Se tiver botão "Nuevo" ou "Configurar", clique e capture o formulário/drawer
