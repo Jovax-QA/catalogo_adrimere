@@ -39,23 +39,6 @@ jobs:
       - name: Build
         run: npm run build -- --config vite.github.config.ts
 
-      - name: Debug - List dist contents
-        run: |
-          echo "=== DIST FOLDER CONTENTS ==="
-          ls -la dist/
-          echo ""
-          echo "=== DIST FOLDER STRUCTURE ==="
-          find dist -type f
-          echo ""
-          echo "=== INDEX.HTML CONTENT ==="
-          cat dist/index.html
-          echo ""
-          echo "=== ASSETS FOLDER ==="
-          ls -la dist/assets/ || echo "No assets folder"
-          echo ""
-          echo "=== FILE EXTENSIONS CHECK ==="
-          find dist/assets/ -name "*.js" -o -name "*.css"
-
       - name: Install Playwright
         run: npx playwright install --with-deps chromium
 
@@ -76,11 +59,11 @@ jobs:
         with:
           path: dist
 
-  # JOB 2: Deploy (só roda se build-and-test passar)
+  # JOB 2: Deploy (só roda no push para main)
   deploy:
     needs: build-and-test
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
