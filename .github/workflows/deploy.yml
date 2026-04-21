@@ -33,6 +33,12 @@ jobs:
       - name: Build
         run: npm run build -- --config vite.github.config.ts
 
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps chromium
+
+      - name: Run E2E tests
+        run: npx playwright test
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

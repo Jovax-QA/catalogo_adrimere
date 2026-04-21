@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { categories, products } from "@/data/products";
 import { ProductCarousel } from "@/components/ProductCarousel";
-import { Droplets, Brush, Heart, Sparkles, CreditCard, X, QrCode, Wallet, Banknote } from "lucide-react";
+import { Droplets, Brush, Heart, Sparkles, CreditCard, QrCode, Wallet, Banknote } from "lucide-react";
 import {
   Dialog,
   DialogContent,
@@ -179,10 +179,10 @@ export function Catalog() {
           <img
             src="./logo.jpeg"
             alt="AdriMere"
-            className="w-16 h-16 rounded-full object-cover ring-2 ring-rose-100"
+            className="w-16 h-16 rounded-full object-cover object-[0%_10%] ring-2 ring-rose-100"
           />
           <div>
-            <h1 className="text-lg font-bold text-gray-900">AdriMere</h1>
+            <h1 className="text-lg font-bold text-gray-900">Adrimere</h1>
             <p className="text-sm text-gray-500">Produtos de Beleza</p>
           </div>
         </div>

@@ -65,6 +65,6 @@ export function formatarPreco(preco: number): string {
 
 /** URLs do projeto */
 export const URLS = {
-  base: 'http://192.168.101.28:5174/',
-  catalogo: 'http://192.168.101.28:5174/',
+  base: '/',
+  catalogo: '/',
 } as const;
