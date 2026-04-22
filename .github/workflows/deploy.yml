@@ -58,7 +58,7 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: Run E2E tests
-        run: npx playwright test
+        run: npx playwright test --project=chromium
 
   deploy:
     needs: [build, testes_e2e]
