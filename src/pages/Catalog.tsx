@@ -55,6 +55,7 @@ export function Catalog() {
           {categories.map((cat) => (
             <button
               key={cat.id}
+              data-testid="category-button"
               onClick={() => setActiveCategory(cat.id)}
               className={`w-full flex items-center gap-3 px-3 py-3 rounded-xl text-sm font-medium transition-all text-left ${
                 activeCategory === cat.id
@@ -148,6 +149,7 @@ export function Catalog() {
             {categories.map((cat) => (
               <button
                 key={cat.id}
+                data-testid="category-button"
                 onClick={() => setActiveCategory(cat.id)}
                 className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all ${
                   activeCategory === cat.id
@@ -193,7 +195,7 @@ export function Catalog() {
             {activeCat && <CategoryIcon icon={activeCat.icon} className="w-8 h-8 text-rose-500" />}
             <div>
               <h2 className="text-xl font-semibold text-gray-900">{activeCat?.name}</h2>
-              <p className="text-sm text-gray-500">{filtered.length} produtos</p>
+              <p data-testid="product-count" className="text-sm text-gray-500">{filtered.length} produtos</p>
             </div>
           </div>
           <Dialog>

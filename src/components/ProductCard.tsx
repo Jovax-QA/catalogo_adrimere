@@ -12,6 +12,7 @@ export function ProductCard({ product }: ProductCardProps) {
       href={waLink}
       target="_blank"
       rel="noopener noreferrer"
+      data-testid="product-card"
       className="group flex-shrink-0 w-44 sm:w-52 rounded-2xl overflow-hidden shadow-lg bg-white border border-gray-100 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 active:scale-95"
       title="Toque para falar com a vendedora no WhatsApp"
     >
@@ -19,6 +20,7 @@ export function ProductCard({ product }: ProductCardProps) {
         <img
           src={product.imageUrl}
           alt={product.name}
+          data-testid="product-image"
           className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110"
           loading="lazy"
           style={{ imageRendering: 'crisp-edges' }}
@@ -27,10 +29,10 @@ export function ProductCard({ product }: ProductCardProps) {
       </div>
 
       <div className="p-3">
-        <h3 className="text-sm font-semibold text-gray-800 leading-tight line-clamp-2 mb-1">
+        <h3 data-testid="product-name" className="text-sm font-semibold text-gray-800 leading-tight line-clamp-2 mb-1">
           {product.name}
         </h3>
-        <p className="text-lg font-bold text-pink-600 mb-2">
+        <p data-testid="product-price" className="text-lg font-bold text-pink-600 mb-2">
           {formatPrice(product.price)}
         </p>
         <button className="w-full flex items-center justify-center gap-1.5 bg-green-500 hover:bg-green-600 active:bg-green-700 text-white text-xs font-semibold py-2 px-3 rounded-xl transition-colors duration-150">

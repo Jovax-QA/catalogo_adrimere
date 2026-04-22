@@ -28,7 +28,7 @@ export class CatalogoPage {
    * @param nomeCategoria - Nome da categoria a ser clicada
    */
   async selecionarCategoria(nomeCategoria: string): Promise<void> {
-    const botao = this.page.locator(`button:has-text("${nomeCategoria}")`).first();
+    const botao = this.page.locator('[data-testid="category-button"]').filter({ hasText: nomeCategoria }).first();
     await botao.click();
     await this.page.waitForTimeout(300);
   }
@@ -79,7 +79,7 @@ export class CatalogoPage {
    * @param nomeCategoria - Nome da categoria
    */
   async verificarCategoriaSelecionada(nomeCategoria: string): Promise<boolean> {
-    const botao = this.page.locator(`button:has-text("${nomeCategoria}")`).first();
+    const botao = this.page.locator('[data-testid="category-button"]').filter({ hasText: nomeCategoria }).first();
     const classes = await botao.getAttribute('class') || '';
     return classes.includes('bg-rose-500') || classes.includes('text-white');
   }
