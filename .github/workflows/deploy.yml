@@ -39,6 +39,7 @@ jobs:
           path: dist
 
   testes_e2e:
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
