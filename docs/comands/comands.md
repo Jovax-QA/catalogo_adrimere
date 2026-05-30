@@ -1,0 +1,1 @@
+./node_modules/.bin/playwright.cmd test --ui

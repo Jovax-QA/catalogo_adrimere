@@ -23,17 +23,17 @@ export const CatalogoElements = {
   conteudo: {
     container: 'main',
     tituloCategoria: 'main h2',
-    contadorProdutos: 'main p:has-text("produtos")',
+    contadorProdutos: '[data-testid="product-count"]',
     productCarousel: '[class*="ProductCarousel"]',
   },
 
   /** Cards de produtos */
   produtoCard: {
-    container: 'article, [class*="card"], [class*="product"]',
-    imagem: 'img',
-    nome: 'h3, [class*="name"], [class*="title"]',
-    preco: '[class*="price"], p:has-text("R$")',
-    botaoWhatsApp: 'button:has-text("WhatsApp"), a[href*="wa.me"]',
+    container: '[data-testid="product-card"]',
+    imagem: '[data-testid="product-image"]',
+    nome: '[data-testid="product-name"]',
+    preco: '[data-testid="product-price"]',
+    botaoWhatsApp: 'a[href*="wa.me"]',
   },
 
   /** Modal de pagamento */
