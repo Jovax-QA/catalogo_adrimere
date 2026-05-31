@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { categories, products } from "@/data/products";
 import { ProductCarousel } from "@/components/ProductCarousel";
-import { Droplets, Brush, Heart, Sparkles, CreditCard, X, QrCode, Wallet, Banknote } from "lucide-react";
+import { Droplets, Brush, Heart, Sparkles, Package, Wind, CreditCard, QrCode, Wallet, Banknote } from "lucide-react";
 import {
   Dialog,
   DialogContent,
@@ -16,6 +16,8 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   brush: Brush,
   heart: Heart,
   sparkles: Sparkles,
+  package: Package,
+  wind: Wind,
 };
 
 // Componente para renderizar ícone da categoria
