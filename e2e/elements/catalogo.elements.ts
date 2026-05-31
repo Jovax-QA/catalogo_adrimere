@@ -32,7 +32,6 @@ export const CatalogoElements = {
     container: '[data-testid="product-card"]',
     imagem: '[data-testid="product-image"]',
     nome: '[data-testid="product-name"]',
-    preco: '[data-testid="product-price"]',
     botaoWhatsApp: 'a[href*="wa.me"]',
   },
 

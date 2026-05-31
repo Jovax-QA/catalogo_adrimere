@@ -31,9 +31,11 @@ export interface Viewport {
 /** Categorias disponíveis */
 export const CATEGORIAS: Categoria[] = [
   { id: 'perfumes', nome: 'Perfumes', icone: 'droplets', quantidadeProdutosEsperada: 3 },
-  { id: 'maquiagem', nome: 'Maquiagem', icone: 'brush', quantidadeProdutosEsperada: 3 },
-  { id: 'skincare', nome: 'Skincare', icone: 'heart', quantidadeProdutosEsperada: 3 },
-  { id: 'cabelos', nome: 'Cabelos', icone: 'sparkles', quantidadeProdutosEsperada: 3 },
+  { id: 'skincare', nome: 'Skincare', icone: 'heart', quantidadeProdutosEsperada: 1 },
+  { id: 'cabelos', nome: 'Cabelos', icone: 'sparkles', quantidadeProdutosEsperada: 1 },
+  { id: 'cuidados-pessoais', nome: 'Cuidados Pessoais', icone: 'package', quantidadeProdutosEsperada: 4 },
+  { id: 'sabonetes', nome: 'Sabonetes', icone: 'droplets', quantidadeProdutosEsperada: 1 },
+  { id: 'desodorantes', nome: 'Desodorantes', icone: 'wind', quantidadeProdutosEsperada: 2 },
 ];
 
 /** Viewports para testes responsivos */

@@ -183,10 +183,9 @@ export class CatalogoPage {
    * Obtém informações de um produto
    * @param index - Índice do produto
    */
-  async obterInfoProduto(index: number): Promise<{ nome: string; preco: string }> {
+  async obterInfoProduto(index: number): Promise<{ nome: string }> {
     const card = this.page.locator(CatalogoElements.produtoCard.container).nth(index);
     const nome = await card.locator(CatalogoElements.produtoCard.nome).textContent() || '';
-    const preco = await card.locator(CatalogoElements.produtoCard.preco).textContent() || '';
-    return { nome: nome.trim(), preco: preco.trim() };
+    return { nome: nome.trim() };
   }
 }

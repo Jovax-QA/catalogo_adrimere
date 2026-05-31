@@ -28,7 +28,7 @@ test.describe('Dado que o usuário acessa o Catálogo de Beleza', () => {
     expect(titulo.length).toBeGreaterThan(0);
   });
 
-  test('CT02: Então deve exibir todas as 4 categorias disponíveis', async () => {
+  test('CT02: Então deve exibir todas as 6 categorias disponíveis', async () => {
     // Arrange - página carregada
     // Act - verificar cada categoria
     for (const categoria of CATEGORIAS) {
@@ -36,7 +36,7 @@ test.describe('Dado que o usuário acessa o Catálogo de Beleza', () => {
       expect(categoriaVisivel).toBeTruthy();
     }
     // Assert
-    expect(CATEGORIAS).toHaveLength(4);
+    expect(CATEGORIAS).toHaveLength(6);
   });
 
   test('CT03: Então deve exibir produtos da categoria padrão', async () => {
@@ -87,12 +87,12 @@ test.describe('Dado que o usuário acessa o Catálogo de Beleza', () => {
     const categoriaInicial = await catalogoPage.obterTituloCategoria();
     
     // Act
-    await catalogoPage.selecionarCategoria('Maquiagem');
+    await catalogoPage.selecionarCategoria('Sabonetes');
     const categoriaFinal = await catalogoPage.obterTituloCategoria();
     
     // Assert
     expect(categoriaFinal).not.toBe(categoriaInicial);
-    expect(categoriaFinal).toBe('Maquiagem');
+    expect(categoriaFinal).toBe('Sabonetes');
   });
 
   test('CT05: Então deve manter categoria selecionada destacada visualmente', async () => {
@@ -223,7 +223,6 @@ test.describe('Dado que o usuário acessa o Catálogo de Beleza', () => {
     
     // Assert
     expect(info.nome.length).toBeGreaterThan(0);
-    expect(info.preco).toContain('R$');
   });
 
   test('CT12: Então produtos devem ter link de WhatsApp configurado', async () => {
