@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [main, feature/-inserir-testes-automatizados]
+    branches: [main, develop, feature/-inserir-testes-automatizados]
   workflow_dispatch:
 
 permissions:
