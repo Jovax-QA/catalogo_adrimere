@@ -1,4 +1,4 @@
-import { Product, buildWhatsAppLink, formatPrice } from "@/data/products";
+import { Product, buildWhatsAppLink } from "@/data/products";
 
 interface ProductCardProps {
   product: Product;
@@ -29,12 +29,9 @@ export function ProductCard({ product }: ProductCardProps) {
       </div>
 
       <div className="p-3">
-        <h3 data-testid="product-name" className="text-sm font-semibold text-gray-800 leading-tight line-clamp-2 mb-1">
+        <h3 data-testid="product-name" className="text-sm font-semibold text-gray-800 leading-tight line-clamp-2 mb-3">
           {product.name}
         </h3>
-        <p data-testid="product-price" className="text-lg font-bold text-pink-600 mb-2">
-          {formatPrice(product.price)}
-        </p>
         <button className="w-full flex items-center justify-center gap-1.5 bg-green-500 hover:bg-green-600 active:bg-green-700 text-white text-xs font-semibold py-2 px-3 rounded-xl transition-colors duration-150">
           <svg
             viewBox="0 0 24 24"
