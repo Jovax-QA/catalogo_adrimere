@@ -32,7 +32,7 @@ test.describe('Dado que o usuário acessa o Catálogo de Beleza', () => {
     // Arrange - página carregada
     // Act - verificar cada categoria
     for (const categoria of CATEGORIAS) {
-      const categoriaVisivel = await catalogoPage.page.locator(`button:has-text("${categoria.nome}")`).isVisible();
+      const categoriaVisivel = await catalogoPage.page.locator('[data-testid="category-button"]').filter({ hasText: categoria.nome }).first().isVisible();
       expect(categoriaVisivel).toBeTruthy();
     }
     // Assert
