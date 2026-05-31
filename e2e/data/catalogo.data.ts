@@ -30,7 +30,7 @@ export interface Viewport {
 
 /** Categorias disponíveis */
 export const CATEGORIAS: Categoria[] = [
-  { id: 'perfumes', nome: 'Perfumes', icone: 'droplets', quantidadeProdutosEsperada: 3 },
+  { id: 'perfumes', nome: 'Perfumes', icone: 'droplets', quantidadeProdutosEsperada: 4 },
   { id: 'skincare', nome: 'Skincare', icone: 'heart', quantidadeProdutosEsperada: 1 },
   { id: 'cabelos', nome: 'Cabelos', icone: 'sparkles', quantidadeProdutosEsperada: 1 },
   { id: 'cuidados-pessoais', nome: 'Cuidados Pessoais', icone: 'package', quantidadeProdutosEsperada: 4 },
